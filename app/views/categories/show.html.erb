@@ -1,0 +1,12 @@
+<% @category.products.each do |product| %>
+	<p><b><%= product.title %></b></p>
+	<div class="img" style="background-image: url('<%= image_path product_image(product.id) %>');"></div>
+	<p><%= product.description %></p>
+	<p>
+	    Price: <b><%= product.price %></b>
+	</p>
+	<hr>
+<% end %>
+	<div>
+	    <%= link_to (t 'posts.index.back_show'), root_path %>
+	</div>
